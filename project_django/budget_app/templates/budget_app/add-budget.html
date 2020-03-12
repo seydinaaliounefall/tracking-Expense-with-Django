@@ -1,0 +1,15 @@
+{% extends 'budget_app/base.html' %}
+{%  load static %}
+
+{% block content %}
+
+<div class="container">
+    <form action="{% url 'add' %}" method="POST">
+        {%  csrf_token %}
+        {{ form }}
+        
+        <button type="submit" class="btn">Start Project</button>
+    </form>
+</div>
+
+{%  endblock %}
